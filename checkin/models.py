@@ -19,6 +19,9 @@ class User(models.Model):
     def get_certs(self):
         return "\n|\n".join([c.name for c in self.cert_group.all()])
 
+    def get_visit_count(self):
+        return self.event_set.count()
+
     def __str__(self):
         return self.first_name + " " + self.last_name
 

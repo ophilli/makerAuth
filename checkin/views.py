@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
-from .models import Certification, User, Event
+from django.http import HttpResponse
 
-admin.site.register(Certification)
-admin.site.register(User)
-admin.site.register(Event)
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
